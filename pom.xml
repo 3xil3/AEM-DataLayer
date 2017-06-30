@@ -13,7 +13,7 @@
 	<groupId>com.perficient.aem</groupId>
 	<artifactId>aem-datalayer</artifactId>
 	<packaging>pom</packaging>
-	<version>0.1.0</version>
+	<version>0.1.1-SNAPSHOT</version>
 	<name>AEM DataLayer</name>
 	<description>Sling Models based DataLayer library for Adobe Experience Manager</description>
 	<url>https://github.com/PerficientDigital/AEM-DataLayer</url>
@@ -53,9 +53,9 @@
 	</distributionManagement>
 
 	<scm>
-		<url>https://github.com/PerficientDigital/AEM-DataLayer</url>
-		<connection>scm:git:git://github.com/PerficientDigital/AEM-DataLayer.git</connection>
-		<developerConnection>scm:git:git@github.com:PerficientDigital/AEM-DataLayer.git</developerConnection>
+		<url>https://github.com/headwirecom/AEM-DataLayer</url>
+		<connection>scm:git:https://github.com/headwirecom/AEM-DataLayer.git</connection>
+		<developerConnection>scm:git:https://github.com/headwirecom/AEM-DataLayer.git</developerConnection>
 	</scm>
 
 	<developers>
@@ -127,7 +127,8 @@
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
 			</plugin>
-			<!-- Maven GPG Plugin -->
+			<!-- Maven GPG Plugin
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-gpg-plugin</artifactId>
@@ -142,6 +143,7 @@
 					</execution>
 				</executions>
 			</plugin>
+			-->
 			<!-- Maven JavaDoc Plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
