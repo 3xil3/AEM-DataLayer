@@ -12,7 +12,7 @@
 	<groupId>com.perficient.aem</groupId>
 	<artifactId>aem-datalayer</artifactId>
 	<packaging>pom</packaging>
-	<version>0.1.1</version>
+	<version>0.1.2-SNAPSHOT</version>
 	<name>AEM DataLayer</name>
 	<description>Sling Models based DataLayer library for Adobe Experience Manager</description>
 	<url>https://github.com/PerficientDigital/AEM-DataLayer</url>
@@ -55,7 +55,7 @@
 		<url>https://github.com/headwirecom/AEM-DataLayer</url>
 		<connection>scm:git:https://github.com/headwirecom/AEM-DataLayer.git</connection>
 		<developerConnection>scm:git:https://github.com/headwirecom/AEM-DataLayer.git</developerConnection>
-	  <tag>aem-datalayer-0.1.1</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<developers>
