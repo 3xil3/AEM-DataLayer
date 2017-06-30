@@ -77,7 +77,7 @@ public class AEMDataLayerInterceptorFilter implements Filter {
 			try {
 				updateDataLayer(resource, dataLayer);
 			} catch (Exception e) {
-				log.warn("Exception updating DataLayer for resource "+resource, e);
+				log.warn("Exception updating DataLayer", e);
 			}
 		}
 
@@ -111,17 +111,20 @@ public class AEMDataLayerInterceptorFilter implements Filter {
 
 	private void updateDataLayer(Resource resource, DataLayer dataLayerModel) {
 
+		// skipping star resources as the model adapter seems to have problems with it
+		if(resource.getPath().endsWith("/*")) return;
+
 		log.trace("Updating DataLayer with {}", resource);
 		ComponentDataElement cde = null;
 
 		try {
 			cde = (ComponentDataElement) modelFactory.getModelFromResource(resource);
 		} catch (Exception e) {
-			log.trace("Exception adapting resource " + resource + " to ComponentDataElement", e);
+			log.trace("Exception adapting resource " + resource + " to ComponentDataElement");
 		}
 
 		if (cde != null) {
-			log.trace("Found ComponentDataElement {} for {}", cde.getClass().getName(), resource);
+			log.debug("Found ComponentDataElement {} for {}", cde.getClass().getName(), resource);
 			cde.updateDataLayer(dataLayerModel);
 		} else {
 			log.trace("No ComponentDataElement found for {}", resource);

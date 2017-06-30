@@ -36,10 +36,10 @@ public class AEMDataLayerManager {
 	}
 
 	public String getJson() {
-		return DataLayerUtil.toJSON(dataLayer);
+		return dataLayer != null ? DataLayerUtil.toJSON(dataLayer) : "";
 	}
 
 	public AEMDataLayerConfig getConfig() {
-		return dataLayer.getConfig();
+		return dataLayer != null ? dataLayer.getConfig() : null;
 	}
 }
